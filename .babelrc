@@ -1,0 +1,20 @@
+{
+  "presets": ["es2015", "react", "stage-0"],
+  "env":{
+    "production":{
+      "plugins": [
+        "./build/babelRelayPlugin",
+        "transform-runtime",
+        "transform-decorators-legacy"
+      ]
+    },
+    "dev":{
+      "presets": "react-hmre",
+      "plugins": [
+        "./build/babelRelayPlugin",
+        "transform-runtime",
+        "transform-decorators-legacy"
+      ]
+    }
+  }
+}

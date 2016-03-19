@@ -1,0 +1,66 @@
+.banner {
+  background: url('./bg.jpg');
+  min-height: 657px;
+  background-size: cover;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	color: white;
+}
+
+.logo h3 {
+  font-size: 3em;
+  font-family: 'GoogleSourceSansPro';
+}
+
+.top-menu {
+	float: right;
+}
+
+.top-menu ul.lang {
+  margin: 0;
+  z-index: 999;
+  position: absolute;
+  text-align: center;
+  right: 2%;
+  left: auto;
+  background: #555555;
+}
+
+.top-menu ul.menu {
+  display: inline;
+}
+
+.top-menu ul.menu li {
+  display: inline-block;
+  border-bottom: 2px solid #16151b;
+}
+
+.top-menu ul.menu li a {
+  color: #fff;
+  font-size: 1.15em;
+  padding: 0 2px 10px 2px;
+  display: block;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+.top-menu ul.menu li a:hover, .top-menu ul li.active a {
+  border-bottom: 2px solid #008ed6;
+}
+
+.top-menu ul.menu li a:hover {
+  color: #008ed6;
+}
+
+.top-menu #btn-language {
+  background: none;
+  border: 0;
+}
+
+.logo, .menu, .caret, .flag-icon, .white, .btn, .btn-default, .dropdown-toggle, .dropdown-menu, .lang, .btn-group, .menu-drawer, .top-menu, .clearfix, .header, .banner-info, .container {
+  color: white;
+}

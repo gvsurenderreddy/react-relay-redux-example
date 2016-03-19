@@ -1,0 +1,62 @@
+.dropdown-menu {
+  margin: 0;
+  text-align: center;
+  right: 2%;
+  left: auto;
+  background: #555555;
+}
+
+.lang-flag {
+	position: absolute;
+	z-index: 1;
+}
+
+.lang-dropdown-button {
+	background-color: transparent;
+	position: absolute;
+	color: white;
+	border: 0;
+	width: 30px;
+	z-index: 2;
+	padding: 0;
+}
+
+.lang-dropdown-button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.lang-dropdown-button:focus {
+  background-color: transparent;
+  color: white;
+}
+
+:global div.open>button.dropdown-toggle.btn-default {
+	background-color: transparent;
+	color: white;
+}
+
+:global div.open>button.dropdown-toggle.btn-default:hover {
+	background-color: transparent;
+	color: white;
+}
+
+:global div.open>button.dropdown-toggle.btn-default:active {
+	background-color: transparent;
+	color: white;
+}
+
+:global div.open>button.dropdown-toggle.btn-default:focus {
+	background-color: transparent;
+	color: white;
+}
+
+.dropdown-toogle span {
+	position: absolute;
+	right: 0;
+	color: white;
+}
+
+.dropdown-toogle span:hover {
+	color: white;
+}

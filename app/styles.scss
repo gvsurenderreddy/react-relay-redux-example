@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'GoogleSourceSansPro';
+  src: url('./fonts/SourceSansPro-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+body{
+  background-color: darken(white, 10%);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+.color-red{
+	background: red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
