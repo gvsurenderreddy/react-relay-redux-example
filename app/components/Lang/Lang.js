@@ -31,17 +31,6 @@ export default class Lang extends React.Component {
 					})}
 				</DropdownButton>
 			</div>
-			// <div className="btn-group">
-	  //           <button className="btn btn-default dropdown-toggle" id="btn-language" type="button"
-	  //                   data-toggle="dropdown">
-	  //             <span className='flag-icon'>asd</span>
-	  //             <span className="caret white"></span>
-	  //           </button>
-	  //           <ul className="dropdown-menu lang">
-	  //           	<li>1</li>
-	  //           	<li>2</li>
-	  //           </ul>
-	  //         </div>
 		)
 	}
 }

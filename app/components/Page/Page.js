@@ -7,10 +7,6 @@ import { connect } from '../../redux-compat';
 }))
 class Page extends React.Component {
 
-	componentDidMount() {
-		console.log(this.props);
-	}
-
 	fetchNewLang() {
 		const { language } = this.props.store.getState();
 

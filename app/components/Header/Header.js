@@ -7,7 +7,6 @@ import Menu from '../Menu/Menu';
 import CSSModules from 'react-css-modules';
 import styles from './header.scss';
 
-
 @connect(state => ({
   language: state.language
 }))
@@ -19,7 +18,6 @@ class Header extends React.Component {
 
 		return(
 			<div styleName="banner">
-				count = {this.props.language}
 		          <header styleName="header">
 		            <div styleName="logo" data-wow-delay="0.5s">
 		              <h3>yourdevelopers</h3>
