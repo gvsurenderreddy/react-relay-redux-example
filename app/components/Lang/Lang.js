@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from '../../redux-compat';
-
 import { DropdownButton, MenuItem } from 'react-bootstrap';
+
+import LangIcon from '../LangIcon/LangIcon';
 
 import CSSModules from 'react-css-modules';
 import styles from './lang.scss';
@@ -21,16 +22,15 @@ export default class Lang extends React.Component {
 		const languages = wp_query.terms[0].children;
 
 		return (
-			<div>
-				<span className="flag-icon flag-icon-gb" styleName="lang-flag"></span>
-				<DropdownButton bsStyle="default" title={["This ", <strong>IS</strong>, " working!"]} id="Lang" styleName="lang-dropdown-button">
-					{languages.map(lang => {
-						return (
-							<MenuItem key={lang.term_id} onClick={() => this.changeLang(lang.slug)}>{lang.slug}</MenuItem>
-						)
-					})}
-				</DropdownButton>
-			</div>
+			<DropdownButton bsStyle="default" title={[<LangIcon language={this.props.language} />]} id="Lang" styleName="dropdown">
+				{languages.map(lang => {
+					return (
+						<MenuItem key={lang.term_id} onClick={() => this.changeLang(lang.slug)} styleName="dropdown-menu">
+							<LangIcon language={lang.slug} />
+						</MenuItem>
+					)
+				})}
+			</DropdownButton>
 		)
 	}
 }
