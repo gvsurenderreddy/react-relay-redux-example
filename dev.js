@@ -2,11 +2,9 @@
 import express from 'express';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from './webpack.config.js';
-import {graphql} from 'graphql';
-import graphqlHTTP from 'express-graphql';
+require('dotenv').config();
 
 const APP_PORT = 3000;
 
@@ -17,7 +15,7 @@ app = new WebpackDevServer(compiler, {
   hot: true,
   historyApiFallback: true,
   contentBase: 'src',
-  proxy: {'/graphql': 'http://localhost/wordpress/wp/'},
+  proxy: {'/graphql': process.env.GRAPHQL_ENDPOINT.slice(0, -8)},
   publicPath: config.output.publicPath,
   stats: {
     colors: true,

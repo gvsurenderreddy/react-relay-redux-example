@@ -1,11 +1,9 @@
 var introspectionQuery = require('graphql/utilities').introspectionQuery;
 var request            = require('sync-request');
 import fs from 'fs';
+require('dotenv').config();
 
-var url = 'http://localhost/wordpress/wp/graphql';
-//var url = 'http://wordexpress.io:8080/';
-
-var response = request('POST', url, {
+var response = request('POST', process.env.GRAPHQL_ENDPOINT, {
    json: {
       query: introspectionQuery
    }
