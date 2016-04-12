@@ -57,7 +57,7 @@ module.exports = {
         ],
         exclude: /node_modules|lib/
       },
-      { test: /\.(jpg|ttf|eot|woff2|woff|svg)?$/, loader: "url-loader" },
+      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" },
     ],
   },
   plugins: [
