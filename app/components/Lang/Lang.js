@@ -1,4 +1,5 @@
 import React from 'react';
+import Relay from 'react-relay';
 import { connect } from '../../redux-compat';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 
@@ -11,7 +12,7 @@ import styles from './lang.scss';
   language: state.language
 }))
 @CSSModules(styles, {allowMultiple: true})
-export default class Lang extends React.Component {
+class Lang extends React.Component {
 
 	changeLang(lang) {
 		this.props.store.dispatch({type: 'SET_LANGUAGE', lang: lang})
@@ -34,3 +35,20 @@ export default class Lang extends React.Component {
 		)
 	}
 }
+
+export default Relay.createContainer(Lang, {
+
+	fragments: {
+		wp_query: () => Relay.QL`
+			fragment on WPQuery {
+				terms(slug: "languages") {
+				  term_id
+				  children {
+					term_id
+					slug
+				  }
+				}
+			  }
+		`
+	}
+})

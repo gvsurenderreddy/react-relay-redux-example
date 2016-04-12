@@ -25,7 +25,7 @@ export default Relay.createContainer(App, {
     wp_query: () => Relay.QL`
       fragment on WPQuery {
         ${Header.getFragment('wp_query')}
-        ${Page.getFragment('wp_query', {lang: 'gb'})}
+        ${Page.getFragment('wp_query')}
       }
     `
   },

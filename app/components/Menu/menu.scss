@@ -1,3 +1,65 @@
-.logo, .menu, .caret, .flag-icon, .white, .btn, .btn-default, .dropdown-toggle, .dropdown-menu, .lang, .btn-group, .menu-drawer, .top-menu, .clearfix, .header, .banner-info, .container {
+.menu {
+  display: inline;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
+  color: #fff;
+  font-size: 1.15em;
+  padding: 0 5px;
+  display: block;
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+
+.menu li a:hover {
+  color: #008ed6;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  background: none!important;
+  border: 0;
+}
+
+.dropdown > span {
+  content: url('./nav.png');
+  cursor: pointer;
+  height: 22px;
+}
+
+.dropdown ~ ul {
+  padding: 10px 20px;
+  position: absolute;
+  text-align: center;
+  left: auto;
+  background: #555555;
+  right: 2%;
   color: white;
+}
+
+ul .dropdown-menu a {
+  padding: 7px;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 600;
+  display: block;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+@media all and (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
 }

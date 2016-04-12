@@ -1,4 +1,4 @@
-export function language(state = 'gb', action) {
+export function language(state = 'pl', action) {
 	switch(action.type) {
 		case 'SET_LANGUAGE':
 			return action.lang;

@@ -23,7 +23,7 @@ class Header extends React.Component {
 		              <h3>yourdevelopers</h3>
 		            </div>
 		            <nav styleName="top-menu">
-		              <Menu />
+		              <Menu wp_query={wp_query} />
 		              <Lang wp_query={wp_query} />
 		            </nav>
 		          </header>
@@ -37,15 +37,10 @@ export default Relay.createContainer(Header, {
 
   fragments: {
     wp_query: () => Relay.QL`
-      fragment on WPQuery {
-        terms(slug: "languages") {
-	      term_id
-	      children {
-	        term_id
-	        slug
-	      }
-	    }
-      }
+    	fragment on WPQuery {
+    		${Lang.getFragment('wp_query')},
+      		${Menu.getFragment('wp_query')}
+    	}
     `
   },
 });

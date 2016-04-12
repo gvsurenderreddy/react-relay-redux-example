@@ -7,19 +7,18 @@ import { connect } from '../../redux-compat';
 }))
 class Page extends React.Component {
 
-	fetchNewLang() {
-		const { language } = this.props.store.getState();
-
+	setLangVariable() {
 		this.props.relay.setVariables({
-			lang: language
+			lang: this.props.language
 		})
 	}
 
 	render() {
-		const { wp_query } = this.props;
-		const posts = wp_query.posts;
-		this.unsubscribe = this.props.store.subscribe(::this.fetchNewLang);
+		const posts = this.props.wp_query.posts;
+		this.unsubscribe = this.props.store.subscribe(::this.setLangVariable);
 
+		this.setLangVariable();
+		
 		return(
 			<div>
 				{posts.map(post => {
@@ -35,7 +34,7 @@ class Page extends React.Component {
 export default Relay.createContainer(Page, {
 
 	initialVariables: {
-		lang: 'gb'
+		lang: ''
 	},
 
 	fragments: {
