@@ -6,6 +6,7 @@ require('./banner.css');
 require('./features.css');
 require('./details.css');
 require('./contact.css');
+require('./footer.css');
 
 @connect(state => ({
   language: state.language

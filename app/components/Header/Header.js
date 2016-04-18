@@ -19,7 +19,7 @@ class Header extends React.Component {
 		return(
 			  <header styleName="header" className="global-padding">
 				<div styleName="logo" data-wow-delay="0.5s">
-				  <h3>yourdevelopers</h3>
+				  <h2>yourdevelopers</h2>
 				</div>
 				<nav styleName="top-menu">
 				  <Menu wp_query={wp_query} />

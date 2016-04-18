@@ -10,11 +10,20 @@ div.banner {
 .banner-text {
   align-self: flex-start;
   width: 50%;
+  margin-top: 6%;
+}
+
+.banner-text div {
+  font-size: 1.3em;
+  color: #999999;
+  line-height: 1.5em;
+  margin-bottom: 2em;
 }
 
 .banner-pic {
   width: 50%;
   align-self: flex-end;
+  text-align: right;
 }
 
 @media (max-width: 73em) {

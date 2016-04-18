@@ -8,6 +8,10 @@
 	padding: 0;
 }
 
+:global .dropdown-menu li {
+	padding: 8px 20px;
+}
+
 .dropdown-menu {
 	background: #555555;
 	display: inline-block;
@@ -26,4 +30,16 @@
 
 .dropdown-menu a:hover {
 	text-decoration: none;
+}
+
+:global .flag-icon {
+	font-size: 16px;
+}
+
+:global .caret {
+	border-top: 4px solid white;
+}
+
+:global .dropdown-menu li span:hover {
+	cursor: pointer;
 }

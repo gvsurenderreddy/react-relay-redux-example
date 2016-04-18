@@ -14,6 +14,10 @@
     padding: 4% 0;
 }
 
+.device-text h3, .device-text-bottom h3 {
+    background: url(../../images/line.png) no-repeat 0% 100%;
+}
+
 .about-bottom {
     display: flex;
     flex-wrap: wrap;
@@ -31,12 +35,61 @@
     align-self: center;
 }
 
-.about p {
+.about p, .about-bottom p {
     font-size: 110%;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-top: 1em;
+    width: 90%;
 }
 
-.about-bottom p {
-    font-size: 110%;
+.about-list {
+    margin-top: 2em;
+}
+
+.about-list ul li {
+    display: block;
+}
+
+.about-list ul li {
+    list-style-type: none;
+    margin-bottom: 0.5em;
+}
+
+.about-list ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.about-list ul li a span {
+    background: url(../../images/icons1.png) no-repeat;
+    width: 20px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 13px;
+}
+
+.about-list ul li a span.abt1 {
+    background-position: -7px -12px;
+}
+
+.about-list ul li a span.abt2 {
+    background-position: -7px -37px;
+}
+
+.about-list ul li a span.abt3 {
+    background-position: -7px -69px;
+}
+
+.about-list ul li a span.abt4 {
+    background-position: -7px -97px;
+}
+
+.about-bottom {
+    background: #f2f2f2;
 }
 
 @media (max-width: 73em) {
@@ -56,11 +109,7 @@
         width: 30%;
     }
 
-    .about p {
-        font-size: 120%;
-    }
-
-    .about-bottom p {
+    .about p, .about-bottom p {
         font-size: 120%;
     }
 }
@@ -84,11 +133,7 @@
         width: 80%;
     }
 
-    .about p {
-        font-size: 140%;
-    }
-
-    .about-bottom p {
+    .about p, .about-bottom p {
         font-size: 140%;
     }
 }
