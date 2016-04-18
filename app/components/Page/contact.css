@@ -1,0 +1,26 @@
+div.theme {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.contact-grids {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3% 0;
+}
+
+.contact-grid {
+    width: 33.33%;
+}
+
+@media (max-width: 73em) {
+    .contact-grids {
+        padding: 6% 0;
+    }
+}
+
+@media (max-width: 24em) {
+    .contact-grids {
+        padding: 8% 0;
+    }
+}

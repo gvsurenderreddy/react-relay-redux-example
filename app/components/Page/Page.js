@@ -2,6 +2,11 @@ import React from 'react';
 import Relay from 'react-relay';
 import { connect } from '../../redux-compat';
 
+require('./banner.css');
+require('./features.css');
+require('./details.css');
+require('./contact.css');
+
 @connect(state => ({
   language: state.language
 }))
@@ -23,7 +28,7 @@ class Page extends React.Component {
 			<div>
 				{posts.map(post => {
 					return (
-						<div>{post.title}</div>
+						<div dangerouslySetInnerHTML={{ __html: post.content }}></div>
 					)
 				})}
 			</div>

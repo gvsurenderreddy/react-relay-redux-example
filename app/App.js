@@ -1,7 +1,8 @@
 import React from 'react';
 import Relay from 'react-relay';
 
-import styles from './styles.scss';
+//import * from './styles.css';
+require('./styles.css');
 import Header from './components/Header/Header';
 import Page from './components/Page/Page';
 

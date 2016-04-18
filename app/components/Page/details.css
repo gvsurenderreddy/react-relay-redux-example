@@ -1,0 +1,94 @@
+.about-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-device {
+    width: 40%;
+    align-self: center;
+}
+
+.about-device-info {
+    width: 50%;
+    padding: 4% 0;
+}
+
+.about-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-customize {
+    width: 50%;
+    align-self: flex-start;
+    padding: 4% 0;
+}
+
+.about-device-bottom {
+    width: 40%;
+    align-self: center;
+}
+
+.about p {
+    font-size: 110%;
+}
+
+.about-bottom p {
+    font-size: 110%;
+}
+
+@media (max-width: 73em) {
+    .about-device {
+        width: 30%;
+    }
+
+    .about-device-info {
+        width: 60%;
+    }
+
+    .about-customize {
+        width: 60%;
+    }
+
+    .about-device-bottom {
+        width: 30%;
+    }
+
+    .about p {
+        font-size: 120%;
+    }
+
+    .about-bottom p {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 24em) {
+    .about-device {
+        width: 80%;
+    }
+
+    .about-device-info {
+        width: 100%;
+        padding: 8% 0;
+    }
+
+    .about-customize {
+        width: 100%;
+        padding: 8% 0;
+    }
+
+    .about-device-bottom {
+        width: 80%;
+    }
+
+    .about p {
+        font-size: 140%;
+    }
+
+    .about-bottom p {
+        font-size: 140%;
+    }
+}

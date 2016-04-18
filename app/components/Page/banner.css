@@ -1,0 +1,36 @@
+div.banner {
+  background: url('http://192.168.1.111:8000/wp-content/uploads/2016/04/bg.jpg') no-repeat 0px 0px;
+  background-size: cover;
+  padding-top: 7em;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-text {
+  align-self: flex-start;
+  width: 50%;
+}
+
+.banner-pic {
+  width: 50%;
+  align-self: flex-end;
+}
+
+@media (max-width: 73em) {
+  .banner-text {
+    min-width: 60%;
+  }
+  .banner-pic {
+    width: 40%;
+  }
+}
+
+@media (max-width: 24em) {
+  .banner-text {
+    min-width: 100%;
+  }
+  .banner-pic {
+    width: 80%;
+  }
+}

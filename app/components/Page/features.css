@@ -1,0 +1,42 @@
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature-grid {
+    width: 25%;
+    align-self: flex-start;
+    padding: 0 2%;
+    padding-bottom: 3em;
+}
+
+.feature-grid h3 {
+    font-size: 170%;
+}
+
+.feature-grid p {
+    font-size: 90%;
+}
+
+@media (max-width: 73em) {
+    .feature-grid {
+        width: 49%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .feature-grid p {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 24em) {
+    .features-section {
+        justify-content: center;
+    }
+    .feature-grid {
+        min-width: 100%;
+    }
+    .feature-grid p {
+        font-size: 140%;
+    }
+}

@@ -1,19 +1,14 @@
-.banner {
-  background: url('./bg.jpg');
-  min-height: 657px;
-  background-size: cover;
-}
-
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	color: white;
-    padding: 20px;
+    position: absolute;
+    width: 100%;
 }
 
 .logo h3 {
-  font-size: 3em;
+  font-size: 250%;
   font-family: 'GoogleSourceSansPro';
 }
 
@@ -21,8 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-self: flex-start;
 }
 
-.logo, .menu, .caret, .flag-icon, .white, .btn, .btn-default, .dropdown-toggle, .dropdown-menu, .lang, .btn-group, .menu-drawer, .top-menu, .clearfix, .header, .banner-info, .container {
-  color: white;
-}
