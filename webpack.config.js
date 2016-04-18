@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules&localIdentName=[name]'
+        loader: 'style!css?modules&localIdentName=[local]'
       },
       {
         test: /\.scss$/,
@@ -57,12 +57,12 @@ module.exports = {
         ],
         exclude: /node_modules|lib/
       },
-      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" },
+      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" }
     ],
   },
   plugins: [
     new WriteFilePlugin(),
-    new ExtractTextPlugin('app.css', {
+    new ExtractTextPlugin('app/styles.css', {
       allChunks: true
     }),
     new HtmlWebpackPlugin({

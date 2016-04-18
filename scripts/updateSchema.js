@@ -1,5 +1,6 @@
 var introspectionQuery = require('graphql/utilities').introspectionQuery;
 var request            = require('sync-request');
+var path = require('path');
 import fs from 'fs';
 require('dotenv').config();
 

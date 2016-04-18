@@ -46,13 +46,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+        loader: 'style!css?modules&localIdentName=[local]'
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]!sass'),
         exclude: /node_modules|lib/,
       },
+      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" }
     ],
   },
   node: {
