@@ -21,36 +21,29 @@ div.theme {
     text-align: center;
 }
 
-.icon1 {
-    background: url(../../images/icons1.png) no-repeat -46px -14px;
-    width: 28px;
+@mixin icon($top, $left, $width) {
+    background: url(./images/icons1.png) no-repeat $top $left;
+    width: $width;
     height: 35px;
     display: inline-block;
     text-align: center;
     margin-bottom: 1em
+}
+
+.icon1 {
+    @include icon(-46px, -14px, 28px);
 }
 
 .icon2 {
-    background: url(../../images/icons1.png) no-repeat -96px -14px;
-    width: 28px;
-    height: 35px;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 1em
+    @include icon(-96px, -14px, 28px);
 }
 
 .icon3 {
-    background: url(../../images/icons1.png) no-repeat -145px -14px;
-    width: 35px;
-    height: 35px;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 1em
+    @include icon(-145px, -14px, 35px);
 }
 
 .contact-grids {
-    display: flex;
-    flex-wrap: wrap;
+    @extend .flex-wrap;
     padding: 3% 0;
 }
 
@@ -66,13 +59,13 @@ div.theme {
     margin-top: 20px;
 }
 
-@media (max-width: 73em) {
+@media (max-width: $md) {
     .contact-grids {
         padding: 6% 0;
     }
 }
 
-@media (max-width: 24em) {
+@media (max-width: $sm) {
     .contact-grids {
         padding: 8% 0;
     }

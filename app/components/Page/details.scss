@@ -1,41 +1,32 @@
 .about-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.about-device {
-    width: 40%;
-    align-self: center;
-}
-
-.about-device-info {
-    width: 50%;
-    padding: 4% 0;
-}
-
-.device-text h3, .device-text-bottom h3 {
-    background: url(../../images/line.png) no-repeat 0% 100%;
+    @extend .flex-wrap;
 }
 
 .about-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @extend .about-top;
+    background: #f2f2f2;
 }
 
-.about-customize {
-    width: 50%;
-    align-self: flex-start;
-    padding: 4% 0;
-}
-
-.about-device-bottom {
+.about-top-pic, .about-bottom-pic {
     width: 40%;
     align-self: center;
 }
 
-.about p, .about-bottom p {
+.about-top-text {
+    width: 50%;
+    padding: 4% 0;
+}
+
+.about-top h3, .about-bottom h3 {
+    background: url(./images/line.png) no-repeat 0% 100%;
+}
+
+.about-bottom-text {
+    @extend .about-top-text;
+    align-self: flex-start;
+}
+
+.about-top p, .about-bottom p {
     font-size: 110%;
     line-height: 1.5em;
     font-weight: 400;
@@ -64,7 +55,7 @@
 }
 
 .about-list ul li a span {
-    background: url(../../images/icons1.png) no-repeat;
+    background: url(./images/icons1.png) no-repeat;
     width: 20px;
     height: 18px;
     display: inline-block;
@@ -88,52 +79,31 @@
     background-position: -7px -97px;
 }
 
-.about-bottom {
-    background: #f2f2f2;
-}
-
-@media (max-width: 73em) {
-    .about-device {
+@media (max-width: $md) {
+    .about-top-pic, .about-bottom-pic {
         width: 30%;
     }
 
-    .about-device-info {
+    .about-top-text, .about-bottom-text {
         width: 60%;
     }
 
-    .about-customize {
-        width: 60%;
-    }
-
-    .about-device-bottom {
-        width: 30%;
-    }
-
-    .about p, .about-bottom p {
+    .about-top p, .about-bottom p {
         font-size: 120%;
     }
 }
 
-@media (max-width: 24em) {
-    .about-device {
-        width: 80%;
+@media (max-width: $sm) {
+    .about-top-pic, .about-bottom-pic {
+        width: 30%;
     }
 
-    .about-device-info {
+    .about-top-text, .about-bottom-text {
         width: 100%;
         padding: 8% 0;
     }
 
-    .about-customize {
-        width: 100%;
-        padding: 8% 0;
-    }
-
-    .about-device-bottom {
-        width: 80%;
-    }
-
-    .about p, .about-bottom p {
+    .about-top p, .about-bottom p {
         font-size: 140%;
     }
 }

@@ -1,3 +1,12 @@
+$sm: 24em;
+$md: 73em;
+
+@import "components/Page/banner.scss";
+@import "components/Page/contact.scss";
+@import "components/Page/details.scss";
+@import "components/Page/features.scss";
+@import "components/Page/footer.scss";
+
 @font-face {
   font-family: 'GoogleSourceSansPro';
   src: url('./fonts/SourceSansPro-BlackItalic.ttf') format('truetype'); /* Safari, Android, iOS */
@@ -69,7 +78,7 @@ a {
   font-size: 100%;
 }
 
-.global-padding {
+header, .application > div > div > div {
   padding: 2% 7%;
 }
 
@@ -84,6 +93,12 @@ ul {
 
 div {
   line-height: 1.4em;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #toTop {

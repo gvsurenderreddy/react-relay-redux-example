@@ -52,10 +52,19 @@ module.exports = {
         test: /\.scss$/,
         loaders: [
           'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[local]',
+          'sass?sourceMap'
+        ],
+        include: /app\/styles.scss|app\/components\/Page/
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style?sourceMap',
           'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]',
           'sass?sourceMap'
         ],
-        exclude: /node_modules|lib/
+        exclude: /node_modules|lib|app\/components\/Page|app\/styles.scss/
       },
       { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" }
     ],

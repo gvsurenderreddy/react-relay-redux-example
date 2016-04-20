@@ -17,7 +17,7 @@ class Header extends React.Component {
 		const { wp_query } = this.props;
 
 		return(
-			  <header styleName="header" className="global-padding">
+			  <header styleName="header">
 				<div styleName="logo" data-wow-delay="0.5s">
 				  <h2>yourdevelopers</h2>
 				</div>

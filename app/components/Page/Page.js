@@ -2,12 +2,6 @@ import React from 'react';
 import Relay from 'react-relay';
 import { connect } from '../../redux-compat';
 
-require('./banner.css');
-require('./features.css');
-require('./details.css');
-require('./contact.css');
-require('./footer.css');
-
 @connect(state => ({
   language: state.language
 }))

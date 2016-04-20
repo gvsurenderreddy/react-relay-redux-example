@@ -1,10 +1,9 @@
-div.banner {
+.application div.banner {
+  @extend .flex-wrap;
   background: url('http://192.168.1.111:8000/wp-content/uploads/2016/04/bg.jpg') no-repeat 0px 0px;
   background-size: cover;
   padding-top: 7em;
   padding-bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .banner-text {
@@ -21,21 +20,21 @@ div.banner {
 }
 
 .banner-pic {
-  width: 50%;
+  width: 40%;
   align-self: flex-end;
-  text-align: right;
 }
 
-@media (max-width: 73em) {
+
+@media (max-width: $md) {
   .banner-text {
-    min-width: 60%;
+    width: 55%;
   }
   .banner-pic {
-    width: 40%;
+    width: 35%;
   }
 }
 
-@media (max-width: 24em) {
+@media (max-width: $sm) {
   .banner-text {
     min-width: 100%;
   }

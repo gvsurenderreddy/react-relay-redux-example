@@ -1,6 +1,5 @@
 .header {
-	display: flex;
-	justify-content: space-between;
+    composes: flex-wrap from '../../styles.scss';
 	align-items: flex-end;
 	color: white;
     position: absolute;
