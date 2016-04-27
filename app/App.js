@@ -1,12 +1,15 @@
 import React from 'react';
 import Relay from 'react-relay';
 
-//import * from './styles.css';
 require('./styles.scss');
 import Header from './components/Header/Header';
 import Page from './components/Page/Page';
 
 class App extends React.Component {
+
+  componentDidMount() {
+    new WOW().init();
+  }
 
   render() {
     const { wp_query } = this.props;
