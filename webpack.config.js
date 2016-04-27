@@ -5,6 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var WriteFilePlugin = require('write-file-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 
 const devServer = {
     contentBase: path.resolve(__dirname, './app'),
@@ -36,6 +37,10 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /isIterable/,
+        loader: 'imports?Symbol=>false'
+      },
+      {
         test: /\.js?$/,
         loader: 'babel',
         exclude: /node_modules|lib/,
@@ -45,14 +50,11 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.css$/,
-        loader: 'style!css?modules&localIdentName=[local]'
-      },
-      {
         test: /\.scss$/,
         loaders: [
           'style?sourceMap',
-          'css?modules&importLoaders=1&localIdentName=[local]',
+          'css?modules&importLoaders=2&localIdentName=[local]',
+          'postcss',
           'sass?sourceMap'
         ],
         include: /app\/styles.scss|app\/components\/Page/
@@ -61,14 +63,19 @@ module.exports = {
         test: /\.scss$/,
         loaders: [
           'style?sourceMap',
-          'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]',
+          'css?modules&importLoaders=2&localIdentName=[path]___[name]__[local]',
+          'postcss',
           'sass?sourceMap'
         ],
         exclude: /node_modules|lib|app\/components\/Page|app\/styles.scss/
       },
-      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" }
+      {
+        test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/,
+        loader: "url-loader"
+      }
     ],
   },
+  postcss: [autoprefixer],
   plugins: [
     new WriteFilePlugin(),
     new ExtractTextPlugin('app/styles.css', {
