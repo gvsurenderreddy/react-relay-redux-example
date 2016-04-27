@@ -54,8 +54,10 @@
     "react-helmet": "^2.3.1",
     "react-router": "^2.0.0-rc6",
     "react-router-relay": "^0.9.0",
+    "react-scroll": "^1.0.15",
     "redux": "^3.3.1",
-    "relay-local-schema": "^0.3.1"
+    "relay-local-schema": "^0.3.1",
+    "wow.js": "^1.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
@@ -79,9 +81,11 @@
     "css-loader": "^0.19.0",
     "eslint": "^1.5.0",
     "eslint-plugin-react": "^3.4.2",
+    "exports-loader": "^0.6.3",
     "express": "^4.13.3",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^1.6.1",
+    "imports-loader": "^0.6.5",
     "jscs": "^2.1.1",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.3",
