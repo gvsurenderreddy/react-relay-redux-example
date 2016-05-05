@@ -16,7 +16,7 @@ const redux = createStore(combineReducers(store));
 
 ReactDOM.render(
   <Provider store={redux}>
-  	  <Relay.RootContainer Component={App} route={new AppHomeRoute()} />
+    <Relay.RootContainer Component={App} route={new AppHomeRoute()}/>
   </Provider>,
   document.getElementById('root')
 );

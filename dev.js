@@ -25,7 +25,7 @@ app = new WebpackDevServer(compiler, {
     chunkModules: false,
     modules: false
   }
- });
+});
 
 app.use(webpackHotMiddleware(compiler));
 app.listen(APP_PORT, () => {

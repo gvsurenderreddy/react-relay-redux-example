@@ -53,7 +53,7 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]!sass'),
         exclude: /node_modules|lib/,
       },
-      { test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader" }
+      {test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/, loader: "url-loader"}
     ],
   },
   node: {

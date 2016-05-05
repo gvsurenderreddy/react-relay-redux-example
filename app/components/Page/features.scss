@@ -1,59 +1,59 @@
 .features {
-    border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .features-head {
-    text-align: center;
+  text-align: center;
 }
 
 .features-section {
-    @extend .flex-wrap;
-    margin-top: 4em;
+  @extend .flex-wrap;
+  margin-top: 4em;
 }
 
 .feature-grid {
-    width: 25%;
-    align-self: flex-start;
-    padding: 0 2%;
-    padding-bottom: 3em;
-    text-align: center;
+  width: 25%;
+  align-self: flex-start;
+  padding: 0 2%;
+  padding-bottom: 3em;
+  text-align: center;
 }
 
 .feature-grid img {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .feature-grid h3 {
-    font-size: 170%;
-    font-weight: 500;
-    margin-bottom: 0.5em;
+  font-size: 170%;
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 .feature-grid p {
-    font-size: 90%;
+  font-size: 90%;
 }
 
 @media (max-width: $md) {
-    $padding-left-right: 5%;
+  $padding-left-right: 5%;
 
-    .feature-grid {
-        width: 49%;
-        padding-left: $padding-left-right;
-        padding-right: $padding-left-right;
-    }
-    .feature-grid p {
-        font-size: 120%;
-    }
+  .feature-grid {
+    width: 49%;
+    padding-left: $padding-left-right;
+    padding-right: $padding-left-right;
+  }
+  .feature-grid p {
+    font-size: 120%;
+  }
 }
 
 @media (max-width: $sm) {
-    .features-section {
-        justify-content: center;
-    }
-    .feature-grid {
-        min-width: 100%;
-    }
-    .feature-grid p {
-        font-size: 140%;
-    }
+  .features-section {
+    justify-content: center;
+  }
+  .feature-grid {
+    min-width: 100%;
+  }
+  .feature-grid p {
+    font-size: 140%;
+  }
 }

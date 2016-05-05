@@ -1,9 +1,9 @@
 .header {
-    composes: flex-wrap from '../../styles.scss';
-	align-items: flex-end;
-	color: white;
-    position: absolute;
-    width: 100%;
+  composes: flex-wrap from '../../styles.scss';
+  align-items: flex-end;
+  color: white;
+  position: absolute;
+  width: 100%;
 }
 
 .logo h2 {

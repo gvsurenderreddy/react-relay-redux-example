@@ -8,16 +8,16 @@ var WriteFilePlugin = require('write-file-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
 const devServer = {
-    contentBase: path.resolve(__dirname, './app'),
-    outputPath: path.join(__dirname, './dist'),
-    colors: true,
-    quiet: false,
-    noInfo: false,
-    publicPath: '/',
-    historyApiFallback: false,
-    host: '127.0.0.1',
-    port: 3000,
-    hot: true
+  contentBase: path.resolve(__dirname, './app'),
+  outputPath: path.join(__dirname, './dist'),
+  colors: true,
+  quiet: false,
+  noInfo: false,
+  publicPath: '/',
+  historyApiFallback: false,
+  host: '127.0.0.1',
+  port: 3000,
+  hot: true
 };
 
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /\.js?$/,
         loader: 'babel',
-        exclude: /node_modules|lib/,
+        exclude: /node_modules|lib/
       },
       {
         test: /\.json?$/,
@@ -73,7 +73,7 @@ module.exports = {
         test: /\.(jpg|ttf|eot|woff2|woff|svg|png)?$/,
         loader: "url-loader"
       }
-    ],
+    ]
   },
   postcss: [autoprefixer],
   plugins: [

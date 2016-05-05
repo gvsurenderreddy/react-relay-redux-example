@@ -5,6 +5,7 @@ require('./styles.scss');
 import Header from './components/Header/Header';
 import Page from './components/Page/Page';
 
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -12,14 +13,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { wp_query } = this.props;
+    const {wp_query} = this.props;
 
     return (
       <div className="application">
-        <Header wp_query={wp_query} />
-        <Page wp_query={wp_query} />
+        <Header wp_query={wp_query}/>
+        <Page wp_query={wp_query}/>
       </div>
-    )
+    );
   }
 }
 
@@ -32,5 +33,5 @@ export default Relay.createContainer(App, {
         ${Page.getFragment('wp_query')}
       }
     `
-  },
+  }
 });

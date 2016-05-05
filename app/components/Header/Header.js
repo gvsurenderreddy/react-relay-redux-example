@@ -1,11 +1,12 @@
 import React from 'react';
 import Relay from 'react-relay';
-import { connect } from '../../redux-compat';
+import {connect} from '../../redux-compat';
 
 import Lang from '../Lang/Lang';
 import Menu from '../Menu/Menu';
 import CSSModules from 'react-css-modules';
 import styles from './header.scss';
+
 
 @connect(state => ({
   language: state.language
@@ -13,21 +14,21 @@ import styles from './header.scss';
 @CSSModules(styles, {allowMultiple: true})
 class Header extends React.Component {
 
-	render() {
-		const { wp_query } = this.props;
+  render() {
+    const {wp_query} = this.props;
 
-		return(
-			  <header styleName="header">
-				<div styleName="logo" data-wow-delay="0.5s">
-				  <h2>yourdevelopers</h2>
-				</div>
-				<nav styleName="top-menu">
-				  <Menu wp_query={wp_query} />
-				  <Lang wp_query={wp_query} />
-				</nav>
-			  </header>
-		)
-	}
+    return (
+      <header styleName="header">
+        <div styleName="logo" data-wow-delay="0.5s">
+          <h2>yourdevelopers</h2>
+        </div>
+        <nav styleName="top-menu">
+          <Menu wp_query={wp_query}/>
+          <Lang wp_query={wp_query}/>
+        </nav>
+      </header>
+    )
+  }
 }
 
 export default Relay.createContainer(Header, {

@@ -1,13 +1,13 @@
 var introspectionQuery = require('graphql/utilities').introspectionQuery;
-var request            = require('sync-request');
+var request = require('sync-request');
 var path = require('path');
 import fs from 'fs';
 require('dotenv').config();
 
 var response = request('POST', process.env.GRAPHQL_ENDPOINT, {
-   json: {
-      query: introspectionQuery
-   }
+  json: {
+    query: introspectionQuery
+  }
 });
 
 

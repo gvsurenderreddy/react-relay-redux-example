@@ -1,109 +1,109 @@
 .about-top {
-    @extend .flex-wrap;
+  @extend .flex-wrap;
 }
 
 .about-bottom {
-    @extend .about-top;
-    background: #f2f2f2;
+  @extend .about-top;
+  background: #f2f2f2;
 }
 
 .about-top-pic, .about-bottom-pic {
-    width: 40%;
-    align-self: center;
+  width: 40%;
+  align-self: center;
 }
 
 .about-top-text {
-    width: 50%;
-    padding: 4% 0;
+  width: 50%;
+  padding: 4% 0;
 }
 
 .about-top h3, .about-bottom h3 {
-    background: url(./images/line.png) no-repeat 0% 100%;
+  background: url(./images/line.png) no-repeat 0% 100%;
 }
 
 .about-bottom-text {
-    @extend .about-top-text;
-    align-self: flex-start;
+  @extend .about-top-text;
+  align-self: flex-start;
 }
 
 .about-top p, .about-bottom p {
-    font-size: 110%;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin-top: 1em;
-    width: 90%;
+  font-size: 110%;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin-top: 1em;
+  width: 90%;
 }
 
 .about-list {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 
 .about-list ul li {
-    display: block;
+  display: block;
 }
 
 .about-list ul li {
-    list-style-type: none;
-    margin-bottom: 0.5em;
+  list-style-type: none;
+  margin-bottom: 0.5em;
 }
 
 .about-list ul li a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-size: 1.25em;
-    font-weight: 600;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 .about-list ul li a span {
-    background: url(./images/icons1.png) no-repeat;
-    width: 20px;
-    height: 18px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 13px;
+  background: url(./images/icons1.png) no-repeat;
+  width: 20px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 13px;
 }
 
 .about-list ul li a span.abt1 {
-    background-position: -7px -12px;
+  background-position: -7px -12px;
 }
 
 .about-list ul li a span.abt2 {
-    background-position: -7px -37px;
+  background-position: -7px -37px;
 }
 
 .about-list ul li a span.abt3 {
-    background-position: -7px -69px;
+  background-position: -7px -69px;
 }
 
 .about-list ul li a span.abt4 {
-    background-position: -7px -97px;
+  background-position: -7px -97px;
 }
 
 @media (max-width: $md) {
-    .about-top-pic, .about-bottom-pic {
-        width: 30%;
-    }
+  .about-top-pic, .about-bottom-pic {
+    width: 30%;
+  }
 
-    .about-top-text, .about-bottom-text {
-        width: 60%;
-    }
+  .about-top-text, .about-bottom-text {
+    width: 60%;
+  }
 
-    .about-top p, .about-bottom p {
-        font-size: 120%;
-    }
+  .about-top p, .about-bottom p {
+    font-size: 120%;
+  }
 }
 
 @media (max-width: $sm) {
-    .about-top-pic, .about-bottom-pic {
-        width: 30%;
-    }
+  .about-top-pic, .about-bottom-pic {
+    width: 30%;
+  }
 
-    .about-top-text, .about-bottom-text {
-        width: 100%;
-        padding: 8% 0;
-    }
+  .about-top-text, .about-bottom-text {
+    width: 100%;
+    padding: 8% 0;
+  }
 
-    .about-top p, .about-bottom p {
-        font-size: 140%;
-    }
+  .about-top p, .about-bottom p {
+    font-size: 140%;
+  }
 }
