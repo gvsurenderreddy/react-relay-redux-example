@@ -5,14 +5,14 @@
     "stage-0"
   ],
   "plugins": [
-    "./build/babelRelayPlugin",
     "transform-decorators-legacy"
   ],
   "env": {
     "dev": {
       "presets": "react-hmre",
       "plugins": [
-        "transform-runtime"
+        "transform-runtime",
+        "./build/babelRelayPlugin"
       ]
     }
   }

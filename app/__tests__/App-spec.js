@@ -15,5 +15,4 @@ describe(<App />, () => {
     expect(wrapper.find(Header).length).toBe(1);
     expect(wrapper.find(Page).length).toBe(1);
   });
-
 });

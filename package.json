@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/tommyJS/react-relay-redux-example",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest",
+    "testDev": "jest --watch",
     "coverage": "jest --coverage",
     "start": "NODE_ENV=production node ./dist/server.js",
     "startdev": "NODE_ENV=dev babel-node --debug ./dev.js",
