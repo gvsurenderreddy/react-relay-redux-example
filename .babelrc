@@ -1,19 +1,18 @@
 {
-  "presets": ["es2015", "react", "stage-0"],
-  "env":{
-    "production":{
-      "plugins": [
-        "./build/babelRelayPlugin",
-        "transform-runtime",
-        "transform-decorators-legacy"
-      ]
-    },
-    "dev":{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "./build/babelRelayPlugin",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "dev": {
       "presets": "react-hmre",
       "plugins": [
-        "./build/babelRelayPlugin",
-        "transform-runtime",
-        "transform-decorators-legacy"
+        "transform-runtime"
       ]
     }
   }
